@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="31252bd2-e1db-4e39-9fb2-dbe5af7de191" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/models/Profile.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/validation/profile.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/api/profile.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api/profile.js" afterDir="false" />
     </list>
@@ -104,8 +104,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="npm.server" />
         <item itemvalue="npm.start" />
+        <item itemvalue="npm.server" />
       </list>
     </recent_temporary>
   </component>
@@ -123,7 +123,9 @@
       <workItem from="1582922295192" duration="2022000" />
       <workItem from="1583012590249" duration="2082000" />
       <workItem from="1583056966758" duration="695000" />
-      <workItem from="1583057757355" duration="12323000" />
+      <workItem from="1583057757355" duration="14286000" />
+      <workItem from="1583177482939" duration="6758000" />
+      <workItem from="1583283050215" duration="1882000" />
     </task>
     <task id="LOCAL-00001" summary="Added model for mongo DB in User.js">
       <created>1583037710916</created>
@@ -167,7 +169,14 @@
       <option name="project" value="LOCAL" />
       <updated>1583065730229</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Created Profile model for DB. After login uses jwt for authorization. And ask for the profile related to that token. Here no profile is created yet so gives noprofile error.">
+      <created>1583117061384</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1583117061384</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -180,7 +189,8 @@
     <MESSAGE value="Added JWT(tokens) and passport" />
     <MESSAGE value="Created method is-empty and used in register.js and called from users.js for validation" />
     <MESSAGE value="Multiple validation for login and register" />
-    <option name="LAST_COMMIT_MESSAGE" value="Multiple validation for login and register" />
+    <MESSAGE value="Created Profile model for DB. After login uses jwt for authorization. And ask for the profile related to that token. Here no profile is created yet so gives noprofile error." />
+    <option name="LAST_COMMIT_MESSAGE" value="Created Profile model for DB. After login uses jwt for authorization. And ask for the profile related to that token. Here no profile is created yet so gives noprofile error." />
   </component>
   <component name="WindowStateProjectService">
     <state x="414" y="180" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1583105726668">
@@ -191,34 +201,34 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="690" y="304" key="#com.intellij.ide.scriptingContext.ui.PerFileMappingsDialogWrapper/0.0.1920.1050/1920.0.1920.1050/-1920.0.1536.834@0.0.1920.1050" timestamp="1583057570723" />
-    <state x="937" y="123" key="CommitChangelistDialog2" timestamp="1583117020660">
+    <state x="335" y="123" key="CommitChangelistDialog2" timestamp="1583286713409">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="937" y="123" key="CommitChangelistDialog2/0.0.1920.1050/1920.0.1920.1050/-1920.0.1536.834@0.0.1920.1050" timestamp="1583117020660" />
+    <state x="335" y="123" key="CommitChangelistDialog2/0.0.1920.1050/1920.0.1920.1050/-1920.0.1536.834@0.0.1920.1050" timestamp="1583286713409" />
     <state x="-1371" y="172" key="FileChooserDialogImpl" timestamp="1583109692023">
       <screen x="-1920" y="0" width="1536" height="834" />
     </state>
     <state x="-1371" y="172" key="FileChooserDialogImpl/0.0.1920.1050/1920.0.1920.1050/-1920.0.1536.834@-1920.0.1536.834" timestamp="1583109692023" />
-    <state width="1897" height="285" key="GridCell.Tab.0.bottom" timestamp="1583117020708">
+    <state width="1899" height="285" key="GridCell.Tab.0.bottom" timestamp="1583286713469">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state width="745" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1583034195717" />
-    <state width="1897" height="285" key="GridCell.Tab.0.bottom/0.0.1920.1050/1920.0.1920.1050/-1920.0.1536.834@0.0.1920.1050" timestamp="1583117020708" />
-    <state width="1897" height="285" key="GridCell.Tab.0.center" timestamp="1583117020708">
+    <state width="1899" height="285" key="GridCell.Tab.0.bottom/0.0.1920.1050/1920.0.1920.1050/-1920.0.1536.834@0.0.1920.1050" timestamp="1583286713469" />
+    <state width="1899" height="285" key="GridCell.Tab.0.center" timestamp="1583286713469">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state width="745" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1583034195717" />
-    <state width="1897" height="285" key="GridCell.Tab.0.center/0.0.1920.1050/1920.0.1920.1050/-1920.0.1536.834@0.0.1920.1050" timestamp="1583117020708" />
-    <state width="1897" height="285" key="GridCell.Tab.0.left" timestamp="1583117020707">
+    <state width="1899" height="285" key="GridCell.Tab.0.center/0.0.1920.1050/1920.0.1920.1050/-1920.0.1536.834@0.0.1920.1050" timestamp="1583286713469" />
+    <state width="1899" height="285" key="GridCell.Tab.0.left" timestamp="1583286713469">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state width="745" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1583034195717" />
-    <state width="1897" height="285" key="GridCell.Tab.0.left/0.0.1920.1050/1920.0.1920.1050/-1920.0.1536.834@0.0.1920.1050" timestamp="1583117020707" />
-    <state width="1897" height="285" key="GridCell.Tab.0.right" timestamp="1583117020708">
+    <state width="1899" height="285" key="GridCell.Tab.0.left/0.0.1920.1050/1920.0.1920.1050/-1920.0.1536.834@0.0.1920.1050" timestamp="1583286713469" />
+    <state width="1899" height="285" key="GridCell.Tab.0.right" timestamp="1583286713469">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state width="745" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1583034195717" />
-    <state width="1897" height="285" key="GridCell.Tab.0.right/0.0.1920.1050/1920.0.1920.1050/-1920.0.1536.834@0.0.1920.1050" timestamp="1583117020708" />
+    <state width="1899" height="285" key="GridCell.Tab.0.right/0.0.1920.1050/1920.0.1920.1050/-1920.0.1536.834@0.0.1920.1050" timestamp="1583286713469" />
     <state x="461" y="167" key="SettingsEditor" timestamp="1583057658960">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
@@ -227,10 +237,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="498" height="446" key="SwitcherDM/0.0.1536.824@0.0.1536.824" timestamp="1583012896993" />
-    <state x="552" y="258" key="Vcs.Push.Dialog.v2" timestamp="1583065731658">
+    <state x="552" y="258" key="Vcs.Push.Dialog.v2" timestamp="1583117064859">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="552" y="258" key="Vcs.Push.Dialog.v2/0.0.1920.1050/1920.0.1920.1050/-1920.0.1536.834@0.0.1920.1050" timestamp="1583065731658" />
+    <state x="552" y="258" key="Vcs.Push.Dialog.v2/0.0.1920.1050/1920.0.1920.1050/-1920.0.1536.834@0.0.1920.1050" timestamp="1583117064859" />
     <state x="656" y="123" width="607" height="804" key="find.popup" timestamp="1583106678115">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
