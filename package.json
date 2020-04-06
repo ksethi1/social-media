@@ -1,7 +1,7 @@
 {
-  "name": "social-media",
+  "name": "devconnector",
   "version": "1.0.0",
-  "description": "Social media for developers",
+  "description": "Social network for developers",
   "main": "server.js",
   "scripts": {
     "client-install": "npm install --prefix client",
@@ -10,22 +10,21 @@
     "client": "npm start --prefix client",
     "dev": "concurrently \"npm run server\" \"npm run client\""
   },
-  "author": "Kartik Sethi",
-  "license": "ISC",
+  "author": "Brad Traversy",
+  "license": "MIT",
   "dependencies": {
     "bcryptjs": "^2.4.3",
-    "body-parser": "^1.19.0",
-    "concurrently": "^5.1.0",
-    "express": "^4.17.1",
-    "gravatar": "^1.8.0",
-    "jsonwebtoken": "^8.5.1",
-    "mogoose": "0.0.1-security",
-    "mongoose": "^5.9.2",
-    "passport": "^0.4.1",
+    "body-parser": "^1.18.2",
+    "concurrently": "^3.5.1",
+    "express": "^4.16.3",
+    "gravatar": "^1.6.0",
+    "jsonwebtoken": "^8.2.0",
+    "mongoose": "^5.0.12",
+    "passport": "^0.4.0",
     "passport-jwt": "^4.0.0",
-    "validator": "^12.2.0"
+    "validator": "^9.4.1"
   },
   "devDependencies": {
-    "nodemon": "^2.0.2"
+    "nodemon": "^1.17.3"
   }
 }
